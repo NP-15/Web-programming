@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>
+            9th January 2024
+        </title>
+    </head>
+
+    <body>
+        <h3>
+          Lists in HTML
+        </h3>
+        <h5>
+          This is an ordered list
+        </h5>
+        <ol>
+          <li>It can take</li>
+          <li>Multiple</li>
+          <li>Numbers!</li>
+        </ol>
+
+        <h5>
+          This is an unordered list
+        </h5>
+        <ul>
+          <li>It can take</li>
+          <li>Multiple</li>
+          <li>Numbers!</li>
+        </ul>
+
+        <h5>
+          Nested lists
+        </h5>
+        <ol>
+          <li>
+            An ordered list
+            <ul>
+              <li>With unordered lists!</li>
+              <li><i>Random point</i></li>
+            </ul>
+          </li>
+          <li>
+            <u>Testing 123</u>
+            <ul>
+              <li>
+                Another unordered list!
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <hr>
+
+        <h3>
+          Tables in HTML
+        </h3>
+
+        <table border="border" style="text-align: center;" bgcolor="yellow">
+          <caption>Example table</caption>
+          <thead>
+            <th width="50px">Sl. no.</th>
+            <th width="200px">Student Name</th>
+            <th>Registration Number</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ABC</td>
+              <td>22BAI1234</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>DEF</td>
+              <td>22BAI5678</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br><hr>
+
+        <h3>Forms in HTML</h3>
+        <form>
+          <label labelfor="name-box">
+            Your name
+          </label>
+          <input type="text" name="name-box">
+          <br>
+          <label labelfor="gender-box">
+            Your gender: 
+          </label>
+          <input type="radio" name="gender-male">
+          <label labelfor="gender-male">Male</label>
+
+          <input type="radio" name="gender-female">
+          <label labelfor="gender-female">Female</label>
+
+          <br>
+
+          <button type="button">Submit</button>
+        </form>
+    </body>
+</html>
