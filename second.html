@@ -79,24 +79,35 @@
         <br><hr>
 
         <h3>Forms in HTML</h3>
-        <form>
+        <form type="inline" action="post">
           <label labelfor="name-box">
             Your name
           </label>
-          <input type="text" name="name-box">
+          <input type="text" name="name-box" value="Enter your full name" />
           <br>
           <label labelfor="gender-box">
             Your gender: 
           </label>
-          <input type="radio" name="gender-male">
+          <input type="radio" name="gender-male" />
           <label labelfor="gender-male">Male</label>
 
-          <input type="radio" name="gender-female">
+          <input type="radio" name="gender-female" />
           <label labelfor="gender-female">Female</label>
 
           <br>
+          <label labelfor="education-list">Education</label>
+            <select name="education-list" value="Select your level of education">
+              <option value="secondary">Secondary</option>
+              <option value="senior-secondary">Senior Secondary</option>
+              <option value="btech">B.Tech</option>
+              <option value="mtech">M.Tech</option>
+            </select>
+          <br>
 
-          <button type="button">Submit</button>
+          <span>
+            <input type="submit" name="submit-button" value="Submit">
+            <input type="reset" name="reset-button" value="Reset">
+          </span>
         </form>
     </body>
 </html>
