@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-3</title>
+</head>
+<body>
+    <div>
+        <h2>
+            Audio files
+        </h2>
+        <audio controls>
+            <source src="./assets/audio.mp3">
+            Your browser does not support audio files.
+        </audio>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Video files
+        </h2>
+        <video controls>
+            <source src="./asssets/video.mp4" type="video/mp4">
+            Your browser does not support video files.
+        </video>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Embed
+        </h2>
+        <embed type="image/jpg" src="./assets/image.jpg" width="300" height="300">
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Multiple Input types
+        </h2>
+
+        <p>
+            <label>Colour</label>
+            <input type="color">
+            <br>
+
+            <label>Date</label>
+            <input type="date">
+            <br>
+
+            <label>Date/time</label>
+            <input type="datetime-local">
+            <br>
+
+            <label>Email</label>
+            <input type="email">
+            <br>
+
+            <label>Month</label>
+            <input type="month">
+            <br>
+
+            <label>Number</label>
+            <input type="number" name="rng" min="1" max="7" step="2">
+            <br>
+
+            <label>Range</label>
+            <input type="range" name="random" min="1" max="100">
+            <br>
+
+            <label>Search</label>
+            <input type="search">
+            <br>
+
+            <label>Time</label>
+            <input type="time">
+            <br>
+
+            <label>URL</label>
+            <input type="url">
+            <br>
+
+            <label>Week</label>
+            <input type="week">
+            <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Datalist
+        </h2>
+        <label>Select your gender</label>
+        <input list="genders" name="gender">
+        <datalist id="genders">
+            <option value="Male">
+            <option value="Female">
+        </datalist>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Keygen
+        </h2>
+
+        <form method="get" action="">
+            Username: <input type="text" name="username">
+            Encryption: <keygen name="security">
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Output
+        </h2>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" id="a" value="50">
+            + 
+            <input type="number" id="b" value="50">
+            <output name="x" for="a b"></output>
+        </form>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>
+            Form attributes
+        </h2>
+
+        <form action="" autocomplete="on">
+            First name: <input type="text" name="fname"><br>
+            Last Name: <input type="text" name="lname"><br>
+            Email (with validation): <input type="email" name="email-1" autocomplete="off"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <form action="" novalidate>
+            Email (without validation): <input type="email" name="email-2" autocomplete="off"><br>
+        </form>
+
+        
+    </div>
+</body>
+</html>
