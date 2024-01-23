@@ -6,8 +6,6 @@
 
         <style>
             #heading-box {
-                position: fixed;
-                top: 0;
                 height: 15vh;
                 width: 100%;
                 align-items: center;
@@ -27,12 +25,24 @@
             }
 
             #body-box {
-                padding-top: 3rem;
+                padding-top: 5rem;
+                position: fixed;
+                height: 85vh;
+                text-align: center;
             }
 
             #body-table {
-                width: 40%;
-                
+                padding: 3rem;
+                width: 100%;
+            }
+
+            #left-td {
+                border-right: solid;
+                border-right-color: blue;
+            }
+
+            #right-td {
+                padding-left: 1rem;
             }
         </style>
     </head>
@@ -47,14 +57,30 @@
             </center>
         </div>
 
-        <div class="body-box">
-            <table id="body-table">
-                <thead>
-                    <th>
-                        News
-                    </th>
-                </thead>
-            </table>
+        <div id="body-box">
+            <div id="body-center">
+                <table id="body-table">
+                    <thead>
+                        <th style="width: 50%;">
+                            News
+                        </th>
+                        <th style="width: 50%;">
+                            Announcements
+                        </th>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td id="left-td">
+                                News 1 - Date Description
+                            </td>
+                            <td id="right-td">
+                                Open course 1: Description
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>
