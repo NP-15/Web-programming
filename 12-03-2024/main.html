@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            12th March 2024
+        </title>
+    </head>
+
+    <body>
+        <h2>Convert alphabets to numbers</h2><br>
+        <form id = "alphabet-form">
+            <label labelfor = "alphabet-input">Enter your string here: </label>
+            <input type="text" id="alphabet-input">
+            <input type="submit">
+        </form>
+
+        <hr>
+
+        <h2>Re-arrange a string</h2>
+        <form id = "rearr-form">
+            <label labelfor = "rearr-input">Enter your string here: </label>
+            <input type="text" id="rearr-input">
+            <input type="submit">
+        </form>
+
+        <hr>
+
+        <script>
+            document.getElementById("alphabet-form").onsubmit = function() {convert()};
+            document.getElementById("rearr-form").onsubmit = function() {rearrange()};
+
+            function convert() {
+                var data = document.getElementById("alphabet-input").value;
+                var ns = "";
+
+                for (let i = 0; i < data.length; i++) {
+                    if (isNaN(data.charAt(i))) {
+                        if (data.charAt(i) == " ") {
+                            ns += data.charAt(i);
+                        }
+
+                        else {
+                            var num = (data.charCodeAt(i));
+
+                            if ((num >= 65) && (num <= 91)) {
+                                ns += ((num + 1) - 65).toString() + " ";
+                            }
+
+                            else if ((num >= 97) && (num <= 123)) {
+                                ns += ((num + 1) - 97).toString() + " ";
+                            }
+
+                            else {
+                                ns += data.charAt(i).toString() + " ";
+                            }
+                        }
+                    }
+
+                    else {
+                        ns += data.charAt(i).toString();
+                    }
+                }
+
+                alert("Using the conversion scheme of a = 1, b = 2 and so on, the converted string is:\n" + ns);
+            }
+
+            function rearrange() {
+                var data = document.getElementById("rearr-input").value;
+
+                const arr = [];
+                var word = "";
+
+                for (let i = 0; i < data.length; i++) {
+                    if (data.charAt(i) == " ") {
+                        arr.push(word);
+                        word = "";
+                    }
+
+                    else {
+                        word += data.charAt(i);
+                    }
+                }
+
+                arr.push(word);
+                console.log(arr);
+
+                const final = [];
+
+                for (let i = 0; i < arr.length; i++) {
+                    var w = arr[i];
+                    var nw = "";
+                    var num = 0;
+
+                    for (let j = 0; j < w.length; j++) {
+                        if (isNan(w.charAt(j))) {
+                            nw += w.charAt(j);
+                        }
+
+                        else {
+                            num = Number(w.charAt(j));
+                        }
+                    }
+
+                    console.log(nw);
+
+                    //final.splice(num, 0, nw);
+                    //nw = "";
+                    //num = 0;
+                }
+
+                //alert(final);
+                alert("Hello");
+            }
+        </script>
+    </body>
+</html>
